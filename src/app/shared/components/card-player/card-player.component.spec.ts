@@ -16,7 +16,17 @@ describe('CardPlayerComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CardPlayerComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    
+    // Simula la entrada de datos con un objeto de prueba
+    component.track = {
+      _id: 1,
+      cover: 'https://example.com/cover.jpg',
+      name: 'Fake Song',
+      album: 'Fake Album',
+      url: 'https://example.com/audio.mp3'
+    };
+  
+    fixture.detectChanges(); // Forzar actualización del componente
   });
 
   it('should create', () => {
